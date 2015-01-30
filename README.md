@@ -14,3 +14,5 @@ XmlToText (Java)
     XmlToText.java [FILE]     Parses [FILE].
 
 I used it for the XML of the Android App "SMS Backup & Restore"
+
+Download: [XmlToText.jar](https://github.com/adibaba/XmlToText/releases/download/0.1/XmlToText.jar)
