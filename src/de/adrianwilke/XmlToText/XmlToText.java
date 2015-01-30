@@ -32,14 +32,15 @@ import org.xml.sax.helpers.DefaultHandler;
 public class XmlToText extends DefaultHandler {
 
 	private final static String CHARSET_NAME = "UTF8";
+	private final static String CSV_SEPARATOR = "|";
 	private final static String FILE_CHOOSER_DESCRIPTION = "XML files";
 	private final static String FILE_EXTENSION_IN = ".xml";
 	private final static String FILE_EXTENSION_OUT = ".txt";
 	private final static String FILE_NOT_FOUND = "File not found";
 	private final static String FILE_NOT_READABLE = "Can not read file";
-	private final static String NULL_VALUE = "null";
 	private final static String LINE_SEPARATOR = System
 			.getProperty("line.separator");
+	private final static String NULL_VALUE = "null";
 
 	private StringBuilder stringBuilder = new StringBuilder();
 
@@ -170,7 +171,7 @@ public class XmlToText extends DefaultHandler {
 		StringBuilder localStringBuilder = new StringBuilder();
 		for (int i = 0; i < attributes.getLength(); i++) {
 			if (i != 0) {
-				localStringBuilder.append(", ");
+				localStringBuilder.append(CSV_SEPARATOR);
 			}
 			String value = attributes.getValue(i);
 
